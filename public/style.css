@@ -1,0 +1,160 @@
+body {
+	/*background:#245ea6;*/
+	background-image: url("../background.jpg");
+
+	color:white;
+
+}
+
+.logo {
+	margin-left:30px;
+	margin-top:-8px;
+	height:250%;
+}
+
+.navbar {
+	background:#52B7D2;
+	height:60px;
+	
+}
+
+.contact {
+	color:black;
+}
+
+
+.container {
+	width:90%;
+}
+
+.description {
+	float:left;
+	width: 80%;
+	padding:10px;
+	margin-top:40px;
+	font-size:24px;
+	margin-left:30px;
+	color:white;
+	text-shadow: 3px 2px #52B7D2;
+}
+
+.sideBar {
+	width:300px;
+ 	display:block;
+ 	float: right;
+ 	margin-top:40px;
+ 	margin-right:30px;
+ 	margin-bottom:40px;
+	/*border-width:2px;
+	border-style:solid;
+ 	border-color:black;
+ 	border-radius:10px;*/
+ 	padding:10px;
+ 	padding-right:20px;
+ 	padding-left:20px;
+ 	background:white;
+ 	color:#52B7D2;
+ 	box-shadow:8px 4px #52B7D3;
+
+
+
+ }
+
+ .signUpBtn {
+  
+ 	width:150px;
+ 	height:80px;
+ 	margin-left:150px;
+ 	border-radius:10px;
+ 	background-color: white;
+ 	color:#52B7D2;
+ }
+
+
+ /*CONTACT CSS*/
+
+.contactSideBar {
+	width:300px;
+ 	display:block;
+ 	float: right;
+ 	margin-top:40px;
+ 	margin-right:30px;
+ 	margin-bottom:40px;
+	/*border-width:2px;
+	border-style:solid;
+ 	border-color:black;
+ 	border-radius:10px;*/
+ 	padding:10px;
+ 	padding-right:20px;
+ 	padding-left:20px;
+ 	background:white;
+ 	color:black;
+ 	box-shadow:8px 4px #244ea6;
+}
+
+
+/*.contactContainer {
+	width:600px;
+	
+	background-color: #243ea6;
+	opacity:.9;
+	float:left;
+	padding:10px;
+	margin-top:40px;
+	font-size:24px;
+	margin-left:80px;
+			
+}*/
+
+.contactSection {
+	width:600px;
+ 	display:block;
+ 	/*float: right;*/
+ 	margin-top:40px;
+ 	margin-left:30px;
+ 	margin-bottom:40px;
+	/*border-width:2px;
+	border-style:solid;
+ 	border-color:black;
+ 	border-radius:10px;*/
+ 	padding:10px;
+ 	padding-right:20px;
+ 	padding-left:20px;
+ 	background:#52B7D2;
+ 	color:white;
+ 	text-align: center;
+ 	opacity:.9;
+			
+}
+
+.contactSection a {
+	color:white;
+}
+
+.backgroundLogo {
+	width:300px;
+	margin:60px 0px 0px 60px;
+	float:left;
+}
+
+
+/*SIGNUP PAGE CSS*/
+
+.signUpHeader {
+	width:60%;
+	color:white;
+	text-shadow: 8px 4px #52B7D2;
+}
+
+.signUpForm {
+
+	width:50%;
+	margin:auto;
+	margin-bottom:100px;
+	background:#52B7D2;
+	opacity:.85;
+	padding:20px;
+	border-radius:10px;
+
+
+}
