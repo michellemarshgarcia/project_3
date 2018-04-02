@@ -1,6 +1,6 @@
 body {
 	/*background:#245ea6;*/
-	background-image: url("../background.jpg");
+	background-image: url("../public/assets/background2.jpg");
 
 	color:white;
 
@@ -35,7 +35,7 @@ body {
 	font-size:24px;
 	margin-left:30px;
 	color:white;
-	text-shadow: 3px 2px #52B7D2;
+	text-shadow: 3px 2px rgb(42, 113, 133);
 }
 
 .sideBar {
@@ -120,7 +120,6 @@ body {
  	padding:10px;
  	padding-right:20px;
  	padding-left:20px;
- 	background:#52B7D2;
  	color:white;
  	text-align: center;
  	opacity:.9;
