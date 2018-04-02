@@ -17,3 +17,8 @@ CREATE TABLE customers
 	PRIMARY KEY (id),
 	FOREIGN KEY (customerId) REFERENCES customer(Id)
 );
+
+CREATE TABLE cookies
+(
+    theme varchar(40) NOT NUll,
+);
