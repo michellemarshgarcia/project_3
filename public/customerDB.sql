@@ -6,7 +6,7 @@ DROP DATABASE customer_db IF EXISTS;
 
 USE customer_db;
 
-CREATE TABLE customers
+CREATE TABLE contacts
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(40) NOT NULL,
