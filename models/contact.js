@@ -11,23 +11,19 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         phone: {
-             type: DataTypes.STRING,
-             validate: {
-                 len: [10],
-                 is: ["^[0-9]+$",'i']
-             }           
+             type: DataTypes.STRING          
         },     
         type: {
             type: DataTypes.STRING
         }
     });
 
-    Contact.associate = function(models) {
-        Contact.belongsTo(models.Client, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    //Contact.associate = function(models) {
+        //Contact.belongsTo(models.Client, {
+           // foreignKey: {
+                //allowNull: false
+            //}
+        //});
+    //};
     return Contact;
 };

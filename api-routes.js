@@ -1,40 +1,40 @@
-var db = require("../models");
+var db = require("./models");
 
 module.exports = function(app) {
   // Create all our routes and set up logic within those routes where required.
 
   app.get("/test/:customerId", function(req, res) {
     //res.send("Hi there!");
-    db.Customer.findAll({
+    db.Contact.findAll({
       where: {
         customerId: req.params.customerId
       }
-    }).then(function(customer) {
-      res.json(customer);
+    }).then(function(contact) {
+      res.json(contact);
     })
   });
 
 
-    app.post("/api/customer", function(req, res) {
-       customer.create(["name", "email", "phone", "type"], [req.body.name, req.body.email, req.body.phone, req.body.type], function(result) {
-      //   // Send back the ID of the new quote
+    app.post("./model/contact", function(req, res) {
+       Contact.create(["name", "email", "phone", "type"], [req.body.name, req.body.email, req.body.phone, req.body.type], function(result) {
+      // Send back the ID of the new customer
          res.json({ id: result.insertId });
        });
       console.log(req.body);
-      db.Customer.create(req.body).then(function(newCustomer) {
-        console.log("New Customer: ");
-        console.log(newCustomer);
-       res.redirect("/api/customer");
+      db.Contact.create(req.body).then(function(newContact) {
+        console.log("New Contact: ");
+        console.log(newContact);
+       res.redirect("./models/contact");
        res.end();
       });
     });
 
 
-     db.Customer.findAll({}).then(function(customer) {
-       res.json(customer);
+     db.Contact.findAll({}).then(function(contact) {
+       res.json(contact);
      });
 
-     customer.all(function(data) {
+     contact.all(function(data) {
        var hbsObject = {
          users: data
        };
@@ -43,26 +43,26 @@ module.exports = function(app) {
      });
   };
 
-  app.post("/api/customer", function(req, res) {
-     customer.create(["name", "email", "phone", "type"], [req.body.name, req.body.email, req.body.phone, req.body.type], function(result) {
+  app.post("./models/contact", function(req, res) {
+     contact.create(["name", "email", "phone", "type"], [req.body.name, req.body.email, req.body.phone, req.body.type], function(result) {
     //   // Send back the ID of the new customer
        res.json({ id: result.insertId });
      });
-    db.Customer.create(req.body).then(function(newCustomer) {
-      console.log("New Customer: ");
-      console.log(newCustomer);
-      res.redirect("/api/customer");
+    db.Contact.create(req.body).then(function(newContact) {
+      console.log("New Contact: ");
+      console.log(newContact);
+      res.redirect("./models/contact");
      res.end();
 
     });
   });
 
-  app.put("/api/customer/:id", function(req, res) {
+  app.put("/models/contact:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);
 
-    customer.update(
+    contact.update(
        {
          type: req.body.type
        },
@@ -78,7 +78,7 @@ module.exports = function(app) {
      );
   });
 
-  app.get("/api/cookie", function(req, res) {
+  app.get("/models/cookie", function(req, res) {
     Cookie.findAll({
       where: {
         theme: {
@@ -89,7 +89,7 @@ module.exports = function(app) {
       res.json(holiday);
     });
 
-  app.get("/api/cookie", function(req, res) {
+  app.get("/models/cookie", function(req, res) {
       Cookie.findAll({
         where: {
           theme: {
@@ -100,7 +100,7 @@ module.exports = function(app) {
         res.json(birthday);
       });
 
-  app.get("/api/cookie", function(req, res) {
+  app.get("/models/cookie", function(req, res) {
         Cookie.findAll({
           where: {
             theme: {

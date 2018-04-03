@@ -1,8 +1,7 @@
 ### Customer Schema
+DROP DATABASE IF EXISTS customer_db;
 
 CREATE DATABASE customer_db;
-
-DROP DATABASE customer_db IF EXISTS;
 
 USE customer_db;
 
@@ -21,4 +20,5 @@ CREATE TABLE contacts
 CREATE TABLE cookies
 (
     theme varchar(40) NOT NUll,
+    image (url) NOT NULL
 );
