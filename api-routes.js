@@ -78,16 +78,37 @@ module.exports = function(app) {
      );
   });
 
-  app.get("/api/customer", function(req, res) {
-    Customer.findAll({
+  app.get("/api/cookie", function(req, res) {
+    Cookie.findAll({
       where: {
-        phone: {
-          $ne: null
+        theme: {
+          $ne: holiday
         }
       }
-    }).then(function(phone) {
-      res.json(phone);
-    
+    }).then(function(holiday) {
+      res.json(holiday);
     });
+
+  app.get("/api/cookie", function(req, res) {
+      Cookie.findAll({
+        where: {
+          theme: {
+            $ne: birthday
+          }
+        }
+      }).then(function(birthday) {
+        res.json(birthday);
+      });
+
+  app.get("/api/cookie", function(req, res) {
+        Cookie.findAll({
+          where: {
+            theme: {
+              $ne: specialEvent
+            }
+          }
+        }).then(function(specialEvent) {
+          res.json(specialEvent);
+        });  
 
   });

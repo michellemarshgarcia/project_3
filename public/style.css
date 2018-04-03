@@ -55,13 +55,9 @@ body {
  	background:white;
  	color:#52B7D2;
  	box-shadow:8px 4px #52B7D3;
-
-
-
  }
 
  .signUpBtn {
-  
  	width:150px;
  	height:80px;
  	margin-left:150px;
@@ -77,19 +73,18 @@ body {
 	width:300px;
  	display:block;
  	float: right;
- 	margin-top:40px;
- 	margin-right:30px;
+ 	margin-top:200px;
+ 	margin-right:400px;
  	margin-bottom:40px;
 	/*border-width:2px;
 	border-style:solid;
  	border-color:black;
  	border-radius:10px;*/
  	padding:10px;
- 	padding-right:20px;
- 	padding-left:20px;
+ 	padding-right:200px;
+ 	padding-left:200px;
  	background:white;
  	color:black;
- 	box-shadow:8px 4px #244ea6;
 }
 
 
@@ -136,7 +131,6 @@ body {
 	float:left;
 }
 
-
 /*SIGNUP PAGE CSS*/
 
 .signUpHeader {
@@ -154,6 +148,22 @@ body {
 	opacity:.85;
 	padding:20px;
 	border-radius:10px;
+}
 
+/*SEARCH PAGE CSS*/
+.searchHeader {
+	width:60%;
+	color:white;
+	text-shadow: 8px 4px #52B7D2;
+}
 
+.searchForm {
+
+	width:50%;
+	margin:auto;
+	margin-bottom:100px;
+	background:#52B7D2;
+	opacity:.85;
+	padding:20px;
+	border-radius:10px;
 }
