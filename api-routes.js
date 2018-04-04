@@ -15,7 +15,7 @@ module.exports = function(app) {
   });
 
 
-    app.post("./model/contact", function(req, res) {
+    app.post("/models/contact", function(req, res) {
        Contact.create(["name", "email", "phone", "type"], [req.body.name, req.body.email, req.body.phone, req.body.type], function(result) {
       // Send back the ID of the new customer
          res.json({ id: result.insertId });
@@ -24,7 +24,7 @@ module.exports = function(app) {
       db.Contact.create(req.body).then(function(newContact) {
         console.log("New Contact: ");
         console.log(newContact);
-       res.redirect("./models/contact");
+       res.redirect("/models/contact");
        res.end();
       });
     });
@@ -43,7 +43,7 @@ module.exports = function(app) {
      });
   };
 
-  app.post("./models/contact", function(req, res) {
+  app.post("/models/contact", function(req, res) {
      contact.create(["name", "email", "phone", "type"], [req.body.name, req.body.email, req.body.phone, req.body.type], function(result) {
     //   // Send back the ID of the new customer
        res.json({ id: result.insertId });
@@ -51,13 +51,13 @@ module.exports = function(app) {
     db.Contact.create(req.body).then(function(newContact) {
       console.log("New Contact: ");
       console.log(newContact);
-      res.redirect("./models/contact");
+      res.redirect("/models/contact");
      res.end();
 
     });
   });
 
-  app.put("/models/contact:id", function(req, res) {
+  app.put("/models/contact/:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);
@@ -78,37 +78,37 @@ module.exports = function(app) {
      );
   });
 
-  app.get("/models/cookie", function(req, res) {
-    Cookie.findAll({
-      where: {
-        theme: {
-          $ne: holiday
-        }
-      }
-    }).then(function(holiday) {
-      res.json(holiday);
-    });
+  // app.get("/models/cookie", function(req, res) {
+  //   Cookie.findAll({
+  //     where: {
+  //       theme: {
+  //         $ne: holiday
+  //       }
+  //     }
+  //   }).then(function(holiday) {
+  //     res.json(holiday);
+  //   });
 
-  app.get("/models/cookie", function(req, res) {
-      Cookie.findAll({
-        where: {
-          theme: {
-            $ne: birthday
-          }
-        }
-      }).then(function(birthday) {
-        res.json(birthday);
-      });
+  // app.get("/models/cookie", function(req, res) {
+  //     Cookie.findAll({
+  //       where: {
+  //         theme: {
+  //           $ne: birthday
+  //         }
+  //       }
+  //     }).then(function(birthday) {
+  //       res.json(birthday);
+  //     });
 
-  app.get("/models/cookie", function(req, res) {
-        Cookie.findAll({
-          where: {
-            theme: {
-              $ne: specialEvent
-            }
-          }
-        }).then(function(specialEvent) {
-          res.json(specialEvent);
-        });  
+  // app.get("/models/cookie", function(req, res) {
+  //       Cookie.findAll({
+  //         where: {
+  //           theme: {
+  //             $ne: specialEvent
+  //           }
+  //         }
+  //       }).then(function(specialEvent) {
+  //         res.json(specialEvent);
+  //       });  
 
-  });
+ // });

@@ -33,8 +33,9 @@ body {
 	margin-top:40px;
 	font-size:24px;
 	margin-left:30px;
-	color:white;
-	text-shadow: 3px 2px rgb(42, 113, 133);
+	color: rgb(42, 113, 133);
+	text-shadow: 1px 1px black;
+	background: rgba(255, 255, 255, .5)
 }
 
 .sideBar {
@@ -116,10 +117,22 @@ body {
  	padding-left:20px;
  	color:white;
  	text-align: center;
- 	opacity:.9;
-			
+	opacity:.9; 
 }
 
+.button {
+		width:20px;
+		height:10px;
+		margin-left:50px;
+		border-radius:10px;
+		background-color: white;
+		color:rgb(233, 150, 111);
+	}
+
+.btn-success {
+	background-color: coral
+}
+	
 .contactSection a {
 	color:white;
 }
@@ -135,7 +148,7 @@ body {
 .signUpHeader {
 	width:60%;
 	color:white;
-	text-shadow: 8px 4px #52B7D2;
+	text-shadow: 1px 1px #52B7D2;
 }
 
 .signUpForm {
@@ -153,11 +166,10 @@ body {
 .searchHeader {
 	width:60%;
 	color:white;
-	text-shadow: 8px 4px #52B7D2;
+	text-shadow: 1px 1px #52B7D2;
 }
 
 .searchForm {
-
 	width:50%;
 	margin:auto;
 	margin-bottom:100px;
@@ -165,4 +177,42 @@ body {
 	opacity:.85;
 	padding:20px;
 	border-radius:10px;
+}
+
+.searchDropdown {
+	width:20%;
+	margin:auto;
+	margin-bottom:100px;
+	background:#52B7D2;
+	opacity:.85;
+	padding:20px;
+	border-radius:10px;
+}
+
+/*On the flex container*/
+
+.flexcontainer {
+	display: flex;
+	flex-direction: row;
+ }
+
+#displayCookies img {
+	width: 300px;
+	height: 300px;
+	padding-right: 30px;
+	padding-bottom: 30px
+}
+
+#about-body {
+	background-image: url("../public/assets/displayPic1.jpg")
+}
+
+#cookies-body {
+	background-color: lightblue;
+	background-image: none;
+}
+
+.profile_picture img {
+	width: 300px;
+	height: 400px;
 }

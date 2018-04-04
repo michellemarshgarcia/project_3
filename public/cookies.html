@@ -22,7 +22,7 @@
 		 
 	</head>
 
-	<body>
+	<body id="cookies-body">
 			
 		<nav class="navbar navbar-inverse">
 			<a class="navbar-brand" href="home.html">
@@ -43,21 +43,22 @@
         <h2>Search Cookies</h2>
         <h4>Browse cookies by theme.</h4>
 		</div>
+		
+		<div class="flexcontainer">
 
-		  <div class="searchDropdown">
-			<button class="btn btn-default dropdown-toggle" type="button" id="contactType1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Cookies
-			  <span class="caret"></span>
-			
-			<ul class="searchDropdown-menu" aria-labelledby="dropdownMenu2">
-			  <li><a href="#">Birthday</a></li>
-			  <li><a href="#">Special Event</a></li>
-			  <li><a href="#">Holiday</a></li>
-			  <li><a href="#">All</a></li>
-			</ul>
-		</button>
+		<div id="cookieTypes" class="row">
+			<p class="col-sm-3 cookieChoice">Holiday</p>
+			<p class="col-sm-3 cookieChoice">Special Event</p>
+			<p class="col-sm-3 cookieChoice">Birthday</p>
+			<p class="col-sm-3 cookieChoice">All</p>
+		</div>
+
+
+		<div id="displayCookies">
+		</div>
 	</div>
-</div>
-</div>
+
+	<script src="search.js"></script>
+
 </body>
 </html>
